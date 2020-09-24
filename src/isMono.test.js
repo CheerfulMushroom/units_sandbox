@@ -46,6 +46,16 @@ describe('test isMono function', () => {
     assert.strictEqual(result, true)
   })
 
+  test('[-4]', () => {
+    const result = isMono([-4]);
+    assert.strictEqual(result, true)
+  })
+
+  test('[-4, 4]', () => {
+    const result = isMono([-4, 4]);
+    assert.strictEqual(result, true)
+  })
+
   // Добавьте сюда ваши тесты
 
   test('[0, 1, 3]', () => {
@@ -72,5 +82,7 @@ describe('test isMono function', () => {
     const result = isMono([-4, 4, 5]);
     assert.strictEqual(result, false)
   })
+
+
 })
 
